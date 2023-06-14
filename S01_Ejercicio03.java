@@ -10,9 +10,9 @@ public class S01_Ejercicio03 {
         // Asignar valores a las propiedades
         // Leeyendo el largo y el ancho desde el teclado
         System.out.print("Largo: ");
-        objRectangulo.largo = objTeclado.nextInt();
+        objRectangulo.setLargo(objTeclado.nextInt());
         System.out.print("Ancho: ");
-        objRectangulo.ancho = objTeclado.nextInt();
+        objRectangulo.setAncho(objTeclado.nextInt());
         objTeclado.close();
 
         // Ejecutar el método

@@ -6,9 +6,9 @@ public class S01_Ejercicio04 {
         Rectangulo objRectangulo = new Rectangulo();
         
         System.out.print("Largo: ");
-        objRectangulo.largo = objTeclado.nextInt();
+        objRectangulo.setLargo(objTeclado.nextInt());
         System.out.print("Ancho: ");
-        objRectangulo.ancho = objTeclado.nextInt();
+        objRectangulo.setAncho(objTeclado.nextInt());
         objTeclado.close();
 
         System.out.println("Perimetro:\t" + objRectangulo.getPerimetro());

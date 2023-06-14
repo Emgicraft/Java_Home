@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class S01_Ejercicio04 {
     public static void main(String[] args) {
         Scanner objTeclado = new Scanner(System.in);
-        Rectangulo objRectangulo = new Rectangulo();
+        Rectangulo objRectangulo = new Rectangulo(0, 0);
         
         System.out.print("Largo: ");
         objRectangulo.setLargo(objTeclado.nextInt());

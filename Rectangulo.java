@@ -3,7 +3,16 @@ public class Rectangulo {
     private int largo;
     private int ancho;
 
-    //Métodos
+    // Constructores
+    public Rectangulo() {
+        System.out.println("Este es el 1er constructor de Rectangulo.");
+    }
+
+    public Rectangulo(int l, int a) {
+        System.out.println("Este es el 2do constructor de Rectangulo.");
+    }
+
+    // Métodos
     public void imprimirResultados() {
         // Realizar calculos
         int perimetro = 2*(this.largo + this.ancho);

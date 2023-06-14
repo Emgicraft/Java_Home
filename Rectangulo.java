@@ -1,7 +1,7 @@
 public class Rectangulo {
     // Propiedades
-    public int largo;
-    public int ancho;
+    private int largo;
+    private int ancho;
 
     //Métodos
     public void imprimirResultados() {
@@ -16,6 +16,24 @@ public class Rectangulo {
     }
 
     // Getters y Setters
+    // Encapsulados
+    public int getLargo() {
+        return largo;
+    }
+
+    public void setLargo(int valor) {
+        this.largo = valor;
+    }
+
+    public int getAncho() {
+        return ancho;
+    }
+
+    public void setAncho(int valor) {
+        this.ancho = valor;
+    }
+
+    // Calculos
     public int getPerimetro() {
         int perimetro = 2*(this.largo + this.ancho);
         return perimetro;

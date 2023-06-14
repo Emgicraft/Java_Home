@@ -10,6 +10,8 @@ public class Rectangulo {
 
     public Rectangulo(int l, int a) {
         System.out.println("Este es el 2do constructor de Rectangulo.");
+        this.largo = l;
+        this.ancho = a;
     }
 
     // Métodos

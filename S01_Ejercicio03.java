@@ -17,7 +17,7 @@ public class S01_Ejercicio03 {
 
         //Asignar valores a las propiedades
         objRectangulo.largo = largo;
-        objRectangulo.largo = ancho;
+        objRectangulo.ancho = ancho;
 
         // Ejecutar el método
         objRectangulo.imprimirResultados();

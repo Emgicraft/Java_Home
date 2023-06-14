@@ -5,19 +5,15 @@ public class S01_Ejercicio03 {
         // ENTRADA
         // Instanciar un objeto tipo Scanner
         Scanner objTeclado = new Scanner(System.in);
-        // Leer el largo y el ancho desde el teclado
-        System.out.print("Largo: ");
-        int largo = objTeclado.nextInt();
-        System.out.print("Ancho: ");
-        int ancho = objTeclado.nextInt();
-        objTeclado.close();
-
         // Instanciar mi clase Rectangulo
         Rectangulo objRectangulo = new Rectangulo();
-
-        //Asignar valores a las propiedades
-        objRectangulo.largo = largo;
-        objRectangulo.ancho = ancho;
+        // Asignar valores a las propiedades
+        // Leeyendo el largo y el ancho desde el teclado
+        System.out.print("Largo: ");
+        objRectangulo.largo = objTeclado.nextInt();
+        System.out.print("Ancho: ");
+        objRectangulo.ancho = objTeclado.nextInt();
+        objTeclado.close();
 
         // Ejecutar el método
         objRectangulo.imprimirResultados();

@@ -149,6 +149,11 @@ public class FrmRegistro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Método invocado cuando se hace clic en el botón Calcular.
+     *
+     * @param evt Evento clic del mouse.
+     */
     private void btnCalcularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCalcularMouseClicked
         double nota1 = Double.parseDouble(txtNota1.getText());
         double nota2 = Double.parseDouble(txtNota2.getText());
@@ -159,7 +164,7 @@ public class FrmRegistro extends javax.swing.JFrame {
         txtNotaMenor.setText(String.valueOf(registro.getNotaMenor()));
         txtNotaMayor.setText(String.valueOf(registro.getNotaMayor()));
         txtPromedio.setText(String.valueOf(registro.promedio(4)));
-        txtEstado.setText(String.valueOf(registro.estado()));
+        txtEstado.setText(registro.estado());
     }//GEN-LAST:event_btnCalcularMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

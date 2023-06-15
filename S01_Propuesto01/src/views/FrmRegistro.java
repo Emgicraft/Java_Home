@@ -156,8 +156,8 @@ public class FrmRegistro extends javax.swing.JFrame {
         
         Registro registro = new Registro(nota1, nota2, nota3);
         
-        txtNotaMenor.setText(String.valueOf(registro.menorNota()));
-        txtNotaMayor.setText(String.valueOf(registro.mayorNota()));
+        txtNotaMenor.setText(String.valueOf(registro.getNotaMenor()));
+        txtNotaMayor.setText(String.valueOf(registro.getNotaMayor()));
         txtPromedio.setText(String.valueOf(registro.promedio(4)));
         txtEstado.setText(String.valueOf(registro.estado()));
     }//GEN-LAST:event_btnCalcularMouseClicked

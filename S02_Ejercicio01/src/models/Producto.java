@@ -1,5 +1,7 @@
 package models;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Moisés
@@ -22,11 +24,21 @@ public class Producto {
     // Métodos
     public void getBuscarByCodigo() {
         // ***** Creamos nuestra Data *****
-        Producto p1 = new Producto(10, "Televisor", 1500.0);
+        Producto p1 = new Producto(10, "Televisor", 1250.0);
         Producto p2 = new Producto(20, "Regriferador", 900.0);
         Producto p3 = new Producto(30, "Licuadora", 350.0);
         Producto p4 = new Producto(40, "Cocina", 800.0);
         Producto p5 = new Producto(50, "Lavadora", 750.0);
+        
+        // Instanciar un ArrayList de Productos
+        ArrayList<Producto> listaProductos = new ArrayList<Producto>();
+        
+        // Agregar los productos a la lista
+        listaProductos.add(p1);
+        listaProductos.add(p2);
+        listaProductos.add(p3);
+        listaProductos.add(p4);
+        listaProductos.add(p5);
     }
     
     // Encapsulados

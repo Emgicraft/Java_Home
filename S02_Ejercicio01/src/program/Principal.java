@@ -1,5 +1,7 @@
 package program;
 
+import models.Producto;
+import java.util.ArrayList;
 import views.FrmVenta;
 
 /**
@@ -14,6 +16,11 @@ public class Principal {
      * @param args Argumentos de la línea de comandos.
      */
     public static void main(String[] args) {
+        Producto prod = new Producto();
+        ArrayList<Producto> lista = prod.getBuscarByCodigo();
+        for (Producto elemento : lista) {
+            System.out.println(elemento.getDescripcion());
+        }
         // Instanciar el Formulario
         FrmVenta ventana = new FrmVenta();
         

@@ -22,7 +22,7 @@ public class Producto {
     }
     
     // Métodos
-    public void getBuscarByCodigo() {
+    public ArrayList<Producto> getBuscarByCodigo() {
         // ***** Creamos nuestra Data *****
         Producto p1 = new Producto(10, "Televisor", 1250.0);
         Producto p2 = new Producto(20, "Regriferador", 900.0);
@@ -31,7 +31,7 @@ public class Producto {
         Producto p5 = new Producto(50, "Lavadora", 750.0);
         
         // Instanciar un ArrayList de Productos
-        ArrayList<Producto> listaProductos = new ArrayList<Producto>();
+        ArrayList<Producto> listaProductos = new ArrayList();
         
         // Agregar los productos a la lista
         listaProductos.add(p1);
@@ -39,6 +39,8 @@ public class Producto {
         listaProductos.add(p3);
         listaProductos.add(p4);
         listaProductos.add(p5);
+        
+        return listaProductos;
     }
     
     // Encapsulados

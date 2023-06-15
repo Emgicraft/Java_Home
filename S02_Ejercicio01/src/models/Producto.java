@@ -22,8 +22,9 @@ public class Producto {
     }
     
     // Métodos
-    public ArrayList<Producto> getBuscarByCodigo() {
-        // ***** Creamos nuestra Data *****
+    public ArrayList<Producto> getBuscarByCodigo(int codBuscado) {
+        // ***** Data de Productos *****
+        // Instanciar 5 productos
         Producto p1 = new Producto(10, "Televisor", 1250.0);
         Producto p2 = new Producto(20, "Regriferador", 900.0);
         Producto p3 = new Producto(30, "Licuadora", 350.0);

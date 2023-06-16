@@ -22,7 +22,7 @@ public class Producto {
     }
     
     // Métodos
-    public ArrayList<Producto> getBuscarByCodigo(int codBuscado) {
+    public Producto getBuscarByCodigo(int codBuscado) {
         // ***** Data de Productos *****
         // Instanciar 5 productos
         Producto p1 = new Producto(10, "Televisor", 1250.0);
@@ -41,7 +41,17 @@ public class Producto {
         listaProductos.add(p4);
         listaProductos.add(p5);
         
-        return listaProductos;
+        // Instanciar variable Producto
+        Producto prod = new Producto();
+        
+        // Busqueda del producto
+        for (Producto p : listaProductos) {
+            if (p.getCodigo() == codBuscado) {
+                prod = p; break;
+            }
+        }
+        
+        return prod;
     }
     
     // Encapsulados

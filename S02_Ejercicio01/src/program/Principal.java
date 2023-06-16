@@ -17,10 +17,8 @@ public class Principal {
      */
     public static void main(String[] args) {
         Producto prod = new Producto();
-        ArrayList<Producto> lista = prod.getBuscarByCodigo();
-        for (Producto elemento : lista) {
-            System.out.println(elemento.getDescripcion());
-        }
+        Producto prodBuscado = prod.getBuscarByCodigo(50);
+        System.out.println(prodBuscado.getDescripcion());
         // Instanciar el Formulario
         FrmVenta ventana = new FrmVenta();
         

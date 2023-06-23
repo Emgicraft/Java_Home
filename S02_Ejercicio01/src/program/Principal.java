@@ -16,9 +16,6 @@ public class Principal {
      * @param args Argumentos de la línea de comandos.
      */
     public static void main(String[] args) {
-        Producto prod = new Producto();
-        Producto prodBuscado = prod.getBuscarByCodigo(50);
-        System.out.println(prodBuscado.getDescripcion());
         // Instanciar el Formulario
         FrmVenta ventana = new FrmVenta();
         

@@ -1,5 +1,8 @@
 package views;
 
+import models.Producto;
+import models.Venta;
+
 /**
  *
  * @author Moisés
@@ -36,7 +39,7 @@ public class FrmVenta extends javax.swing.JFrame {
         btnCalcular = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Registro de Notas");
+        setTitle("Búsqueda y Facturación");
 
         txtDescripcion.setText("Detalle del producto...");
 
@@ -132,7 +135,15 @@ public class FrmVenta extends javax.swing.JFrame {
      * @param evt Evento clic del mouse.
      */
     private void btnBuscarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnBuscarMouseClicked
-        
+        // Leer el código a buscar
+        int codBuscar = Integer.parseInt(txtCodigo.getText());
+        // Instanciar un producto
+        Producto prod = new Producto();
+        // Ejecutar el método de búsqueda
+        prod = prod.buscarPorCodigo(codBuscar);
+        // Mostrar en las cajas de texto
+        txtDescripcion.setText(prod.getDescripcion());
+        txtPrecio.setText(String.valueOf(prod.getPrecio()));
     }//GEN-LAST:event_btnBuscarMouseClicked
 
     /**
@@ -141,7 +152,20 @@ public class FrmVenta extends javax.swing.JFrame {
      * @param evt Evento clic del mouse.
      */
     private void btnCalcularMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCalcularMouseClicked
-        // TODO add your handling code here:
+        // Leer los datos de las cajas de texto
+        int codigo = Integer.parseInt(txtCodigo.getText());
+        String descripcion = txtDescripcion.getText();
+        double precio = Double.parseDouble(txtPrecio.getText());
+        int cantidad = Integer.parseInt(txtCantidad.getText());
+        
+        // Instanciar un producto con sus valores
+        Producto prod = new Producto(codigo, descripcion, precio);
+        
+        // Instanciar una venta con sus valores
+        Venta ven = new Venta(prod, cantidad);
+        
+        // Mostrar el Total
+        txtTotal.setText(String.valueOf(ven.total()));
     }//GEN-LAST:event_btnCalcularMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

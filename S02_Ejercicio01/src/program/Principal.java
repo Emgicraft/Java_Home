@@ -1,7 +1,5 @@
 package program;
 
-import models.Producto;
-import java.util.ArrayList;
 import views.FrmVenta;
 
 /**

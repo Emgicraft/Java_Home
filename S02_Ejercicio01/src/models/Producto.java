@@ -22,7 +22,7 @@ public class Producto {
     }
     
     // Métodos
-    public Producto getBuscarByCodigo(int codBuscado) {
+    public Producto buscarPorCodigo(int codBuscado) {
         // ***** Data de Productos *****
         // Instanciar 5 productos
         Producto p1 = new Producto(10, "Televisor", 1250.0);

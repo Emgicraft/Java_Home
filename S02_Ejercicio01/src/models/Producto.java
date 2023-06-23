@@ -32,7 +32,13 @@ public class Producto {
         Producto p5 = new Producto(50, "Lavadora", 750.0);
         
         // Instanciar un ArrayList de Productos
-        ArrayList<Producto> listaProductos = new ArrayList();
+        ArrayList<Producto> listaProductos = new ArrayList<>();
+        //ArrayList<Producto> listaProductos = new ArrayList<Producto>();
+        /*
+        Ambas formas son correctas y funcionarán de manera idéntica.
+        La forma con el diamond operator (<>) es más concisa y es preferible 
+        cuando se utiliza Java 7 o versiones posteriores. (By ChatGPT).
+        */
         
         // Agregar los productos a la lista
         listaProductos.add(p1);
@@ -41,17 +47,17 @@ public class Producto {
         listaProductos.add(p4);
         listaProductos.add(p5);
         
-        // Instanciar variable Producto
-        Producto prod = new Producto();
+        // Búsqueda del producto
+        // Instanciar
+        Producto prodBuscado = new Producto();
         
-        // Busqueda del producto
         for (Producto p : listaProductos) {
             if (p.getCodigo() == codBuscado) {
-                prod = p; break;
+                prodBuscado = p; break;
             }
         }
         
-        return prod;
+        return prodBuscado;
     }
     
     // Encapsulados
@@ -59,7 +65,7 @@ public class Producto {
      * @return El codigo
      */
     public int getCodigo() {
-        return codigo;
+        return this.codigo;
     }
 
     /**
@@ -73,7 +79,7 @@ public class Producto {
      * @return La descripcion
      */
     public String getDescripcion() {
-        return descripcion;
+        return this.descripcion;
     }
 
     /**
@@ -87,7 +93,7 @@ public class Producto {
      * @return El precio
      */
     public double getPrecio() {
-        return precio;
+        return this.precio;
     }
 
     /**
@@ -96,5 +102,4 @@ public class Producto {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-    
 }
